@@ -46,6 +46,14 @@ public class LoginPage extends BaseClass {
 		return errorMessage;
 	}
 	
+	public String loginWithBlankField() {
+		usernameElement.clear();
+		passwordElement.clear();
+		loginButtonElement.click();
+		String errorMessage = errorElement.getText();
+		return errorMessage;
+	}
+	
 	public void gotoApplication() {
 		driver.get("https://www.saucedemo.com/");
 	}

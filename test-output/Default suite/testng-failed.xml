@@ -5,7 +5,7 @@
     <classes>
       <class name="com.swaglabs.testcases.LoginFunctionality">
         <methods>
-          <include name="testWithValidCredentials"/>
+          <include name="testWithLockedUser"/>
         </methods>
       </class> <!-- com.swaglabs.testcases.LoginFunctionality -->
     </classes>
