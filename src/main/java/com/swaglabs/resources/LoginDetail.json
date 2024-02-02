@@ -1,0 +1,18 @@
+[
+	{
+		"validUsername" : "standard_user",
+		"validPassword" : "secret_sauce",
+		"invalidPassword" : "Pssword@123",
+		"invalidUsername" : "username",
+		"lockedUsername" : "locked_out_user",
+		"productName" : "Sauce Labs Backpack"
+	},
+		{
+		"validUsername" : "standard_user",
+		"validPassword" : "secret_sauce",
+		"invalidPassword" : "Pssword@123",
+		"invalidUsername" : "username",
+		"lockedUsername" : "locked_out_user",
+		"productName" : "Test.allTheThings() T-Shirt (Red)"
+	}
+]
