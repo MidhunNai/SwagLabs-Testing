@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.swaglabs.testcases.LoginFunctionality">
+      <class name="com.swaglabs.testcases.TestProductPage">
         <methods>
-          <include name="testWithLockedUser"/>
+          <include name="teardown"/>
+          <include name="testProductDisplay"/>
+          <include name="launchApplication"/>
         </methods>
-      </class> <!-- com.swaglabs.testcases.LoginFunctionality -->
+      </class> <!-- com.swaglabs.testcases.TestProductPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
