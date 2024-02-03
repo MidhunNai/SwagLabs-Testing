@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="com.swaglabs.listeners.Listeners"/>
-  </listeners>
-  <test thread-count="5" parallel="tests" name="TestLoginFunctionality(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.swaglabs.testcases.TestLoginFunctionality">
+      <class name="com.swaglabs.testcases.TestProductPage">
         <methods>
-          <include name="testWithInvalidPassword" invocation-numbers="0"/>
           <include name="teardown"/>
           <include name="launchApplication"/>
+          <include name="testAddToCart" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.swaglabs.testcases.TestLoginFunctionality -->
+      </class> <!-- com.swaglabs.testcases.TestProductPage -->
     </classes>
-  </test> <!-- TestLoginFunctionality(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -9,24 +9,29 @@ import java.util.List;
 import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.swaglabs.pageobjects.CartPage;
 import com.swaglabs.pageobjects.LoginPage;
 
 public class BaseTest {
 	
 	public WebDriver driver;
 	public LoginPage login;
+	public CartPage cart;
 
 	//Initializing the driver based on the driver name provided in config file.
 	public WebDriver initializeDriver() throws IOException {
@@ -49,6 +54,12 @@ public class BaseTest {
 		return driver;
 	}
 	
+	public CartPage goToCart() {
+		driver.findElement(By.id("shopping_cart_container")).click();
+		cart = new CartPage(driver);
+		return cart;
+	}
+	
 	//Converting JSON data to HashMap for data provider
 	public List<HashMap<String, String>> getJsonDataToHashmap(String filePath) throws IOException {
 		String jsonContent = FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
@@ -69,7 +80,7 @@ public class BaseTest {
 	
 	@AfterMethod(alwaysRun=true)
 	public void teardown() {
-		driver.close();
+		//driver.close();
 	}
 	
 	//Take screenshot

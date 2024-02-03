@@ -4,6 +4,7 @@ import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import org.testng.annotations.DataProvider;
 
+import com.sun.net.httpserver.Authenticator.Retry;
 import com.swaglabs.basetest.BaseTest;
 import com.swaglabs.pageobjects.ProductPage;
 
@@ -30,7 +31,7 @@ public class TestLoginFunctionality extends BaseTest{
 	}
 	
 	//Login with incorrect password
-	@Test (dataProvider = "getData",groups = {"Regression"})
+	@Test (dataProvider = "getData",groups = {"Regression"}, retryAnalyzer=com.swaglabs.listeners.Retry.class)
 	public void testWithInvalidPassword(HashMap<String,String> input) throws IOException {
 		
 		login.gotoApplication();
