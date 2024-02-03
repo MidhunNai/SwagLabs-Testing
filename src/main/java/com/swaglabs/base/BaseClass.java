@@ -23,8 +23,6 @@ public class BaseClass {
 	@FindBy(id="logout_sidebar_link")
 	WebElement logoutElement;
 	
-	@FindBy(id="shopping_cart_container")
-	WebElement cartButton;
 
 	public void waitForElementToAppear (By findby) {
 		
@@ -33,9 +31,6 @@ public class BaseClass {
 	
 	}
 	
-	public void goToCart() {
-		cartButton.click();
-	}
 	
 	By logoutButton = By.id("logout_sidebar_link");
 	
