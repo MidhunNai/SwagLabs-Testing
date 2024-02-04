@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class ProductPage {
 	
@@ -32,6 +33,9 @@ WebDriver driver;
 	
 	@FindBy(id="add-to-cart-sauce-labs-backpack")
 	WebElement addToCartElement;
+	
+	@FindBy(xpath="//select[@class=\"product_sort_container\"]")
+	WebElement dropdownElement;
 	
 	public String productText() {
 		String productText = productHeading.getText();
@@ -67,13 +71,37 @@ WebDriver driver;
 	public WebElement addToCartElement(String productName) {
 		WebElement selectedProduct = findProductByName(productName);
 		WebElement addToCartButton = selectedProduct.findElement(By.xpath(".//div[@class=\"pricebar\"]/button"));
-		return addToCartButton;
+		return addToCartButton;	
+	}
+	
+	//Get Remove from cart button element
+	public WebElement removeButtonElement(String productName) {
+		WebElement selectedProduct = findProductByName(productName);
+		WebElement removeButton = selectedProduct.findElement(By.xpath(".//div[@class=\"pricebar\"]/button"));
+		return removeButton;
 		
 	}
 	
 	public void addToCart() {
 		addToCartElement.click();
 	}
+	
+	public void selectSortOrderZtoA() {
+		Select select = new Select(dropdownElement);
+		select.selectByVisibleText("Name (Z to A)");
+	}
+	
+	public void selectSortOrderLowtoHigh() {
+		Select select = new Select(dropdownElement);
+		select.selectByVisibleText("Price (low to high)");
+	}
+	
+	public void selectSortOrderHightoLow() {
+		Select select = new Select(dropdownElement);
+		select.selectByVisibleText("Price (high to low)");
+	}
+	
+	
 	
 	
 	
