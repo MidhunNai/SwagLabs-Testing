@@ -18,10 +18,13 @@ import com.swaglabs.pageobjects.ProductPage;
 
 public class TestProductPage extends BaseTest{
 	
+	ProductPage productPage = null;
+	CartPage cartPage = null;
+	
 	//Testing Product Display
 	@Test(dataProvider = "getData") 
 	public void testProductDisplay(HashMap<String,String> input) {
-		ProductPage productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
+		productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
 		String productName = productPage.getSingleProduct(input.get("productName"));
 		//System.out.println(productName);
 		Assert.assertTrue(productName.equalsIgnoreCase(input.get("productName")));
@@ -30,7 +33,7 @@ public class TestProductPage extends BaseTest{
 	
 	@Test(dataProvider = "getData", groups = "testrun") 
 	public void testProductDescription(HashMap<String,String> input) {
-		ProductPage productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
+		productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
 		String[] productDetails = productPage.getProductDetails(input.get("productName"));
 		String productDescription = productDetails[0];
 		//String productDescription = productPage.getProductDescription(input.get("productName"));
@@ -43,17 +46,50 @@ public class TestProductPage extends BaseTest{
 	//Add to cart single product
 	@Test(dataProvider = "getData")
 	public void testAddToCart(HashMap<String,String> input) {
-		ProductPage productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
+		productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
 		WebElement addToCartbutton = productPage.addToCartElement(input.get("productName"));
 		addToCartbutton.click();
-		CartPage cartPage = goToCart();
+		cartPage = goToCart();
 		String[] cartDetails = cartPage.getCartDetails(input.get("productName"));
 		String productIncart = cartDetails[0];
 		Assert.assertTrue(productIncart.equalsIgnoreCase(input.get("productName")));
 	}
 	
 	//Remove single product from cart, from the product page
+	@Test(dataProvider = "getData")
+	public void removeProductFromCartInProductPage(HashMap<String,String> input) {
+		productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
+		WebElement addToCartbutton = productPage.addToCartElement(input.get("productName"));
+		addToCartbutton.click();
+		WebElement removeFromCartButton = productPage.removeButtonElement(input.get("productName"));
+		removeFromCartButton.click();
+		cartPage = goToCart();
+		
+	}
 	
+	//Add to cart multiple products
+	@Test(dataProvider = "getData")
+	public void testAddMultipleProduct(HashMap<String,String> input) {
+		productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
+		WebElement addToCartbutton = productPage.addToCartElement(input.get("product1"));
+		addToCartbutton.click();
+		addToCartbutton = productPage.addToCartElement(input.get("product2"));
+		addToCartbutton.click();
+		cartPage = goToCart();
+		String[] cartDetails = cartPage.getCartDetails(input.get("product1"));
+		String productIncart = cartDetails[0];
+		Assert.assertTrue(productIncart.equalsIgnoreCase(input.get("product1")));
+		cartDetails = cartPage.getCartDetails(input.get("product2"));
+		productIncart = cartDetails[0];
+		Assert.assertTrue(productIncart.equalsIgnoreCase(input.get("product2")));
+	}
+	
+	//Test product sorting
+	@Test(dataProvider = "getData")
+	public void testProductSorting(HashMap<String,String> input) {
+		productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
+		productPage.selectSortOrderZtoA();
+	}
 	
 	@DataProvider
 	public Object[][] getData() throws IOException {
