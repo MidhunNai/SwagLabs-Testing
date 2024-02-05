@@ -8,18 +8,22 @@ import org.testng.annotations.DataProvider;
 
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 
 
 import com.swaglabs.basetest.BaseTest;
 import com.swaglabs.pageobjects.CartPage;
+import com.swaglabs.pageobjects.ProductDetail;
 import com.swaglabs.pageobjects.ProductPage;
 
 public class TestProductPage extends BaseTest{
 	
 	ProductPage productPage = null;
 	CartPage cartPage = null;
+	ProductDetail productDetail = null;
 	
 	//Testing Product Display
 	@Test(dataProvider = "getData") 
@@ -89,7 +93,40 @@ public class TestProductPage extends BaseTest{
 	public void testProductSorting(HashMap<String,String> input) {
 		productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
 		productPage.selectSortOrderZtoA();
+		List<String> sortedOnUi = productPage.getAllProductsName();
+		List<String> sortedProductName = productPage.getAllProductsName();
+		Collections.sort(sortedProductName, Collections.reverseOrder());
+		Assert.assertEquals(sortedOnUi, sortedProductName, "Products are not sorted correctly Z-A");
+		productPage.selectSortOrderLowtoHigh();
+		List<Double> productPrices = productPage.getPriceOfAllProducts();
+		List<Double> sortedProductPrices = new ArrayList<>(productPrices);
+		Collections.sort(sortedProductPrices);
+		Assert.assertEquals(productPrices, sortedProductPrices, "Products are not sorted correctly by price (low to high)");
+		productPage.selectSortOrderHightoLow();
+		productPrices = productPage.getPriceOfAllProducts();
+		sortedProductPrices = new ArrayList<>(productPrices);
+		Collections.sort(sortedProductPrices, Collections.reverseOrder());
+		Assert.assertEquals(productPrices, sortedProductPrices, "Products are not sorted correctly by price (high to low)");
 	}
+	
+	//Navigate to product detail page by clicking Product Name
+	@Test(dataProvider="getData")
+	public void testNavigationToProductDetail(HashMap<String,String> input) {
+		productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
+		productDetail = productPage.goToProductDetail(input.get("productName"));
+		String product = productDetail.getProductName();
+		System.out.println(product);
+		Assert.assertTrue(product.equalsIgnoreCase(input.get("productName")));	
+	}
+	//Navigate to product detail page by clicking Product Image
+		@Test(dataProvider="getData")
+		public void goToProductDetailByImage(HashMap<String,String> input) {
+			productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
+			productDetail = productPage.goToProductDetail(input.get("productName"));
+			String product = productDetail.getProductName();
+			System.out.println(product);
+			Assert.assertTrue(product.equalsIgnoreCase(input.get("productName")));	
+		}
 	
 	@DataProvider
 	public Object[][] getData() throws IOException {

@@ -1,6 +1,7 @@
 package com.swaglabs.pageobjects;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -12,6 +13,7 @@ import org.openqa.selenium.support.ui.Select;
 public class ProductPage {
 	
 WebDriver driver; 
+public ProductDetail productDetail;
 	
 	public ProductPage(WebDriver driver) {
 		
@@ -36,6 +38,12 @@ WebDriver driver;
 	
 	@FindBy(xpath="//select[@class=\"product_sort_container\"]")
 	WebElement dropdownElement;
+	
+	@FindBy(xpath="//div[@class=\"inventory_item_price\"]")
+	List<WebElement> allPriceElement;
+	
+	@FindBy(xpath="//div[@class=\"inventory_item\"]")
+	List<WebElement> inventoryElement;
 	
 	public String productText() {
 		String productText = productHeading.getText();
@@ -101,7 +109,41 @@ WebDriver driver;
 		select.selectByVisibleText("Price (high to low)");
 	}
 	
+	public List<String> getAllProductsName() {
+		List<String> allProducts = productListElement.stream()
+				.map(WebElement::getText)
+		        .collect(Collectors.toList());
+		return allProducts;
+	}
 	
+	public List<Double> getPriceOfAllProducts() {
+		// Get the list of product prices using Java Stream
+		List<Double> productPrices = allPriceElement.stream()
+		        .map(priceElement -> {
+		            String priceText = priceElement.getText().replaceAll("[^0-9.]", "");
+		            return Double.parseDouble(priceText);
+		        })
+		        .collect(Collectors.toList());
+		return productPrices;
+	}
+	
+	public ProductDetail goToProductDetail(String productName) {
+		WebElement getSingleProduct = productListElement.stream()
+				.filter(product->product.getText().equals(productName))
+				.findFirst().orElse(null);
+		getSingleProduct.click();	
+		productDetail = new ProductDetail(driver);
+		return productDetail;
+	}
+	
+	public ProductDetail goToProductDetailByImage(String productName) {
+		WebElement getSingleProduct = productListElement.stream()
+				.filter(product->product.getText().equals(productName))
+				.findFirst().orElse(null);
+		getSingleProduct.findElement(By.xpath("//div[@class=\"inventory_item_img\"]")).click();;	
+		productDetail = new ProductDetail(driver);
+		return productDetail;
+	}
 	
 	
 	
