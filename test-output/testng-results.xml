@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-06T01:44:07 IST" name="Default suite" finished-at="2024-02-06T01:44:12 IST" duration-ms="5251">
+  <suite started-at="2024-02-06T19:13:10 IST" name="Default suite" finished-at="2024-02-06T19:13:15 IST" duration-ms="5131">
     <groups>
     </groups>
-    <test started-at="2024-02-06T01:44:07 IST" name="Default test" finished-at="2024-02-06T01:44:12 IST" duration-ms="5251">
+    <test started-at="2024-02-06T19:13:10 IST" name="Default test" finished-at="2024-02-06T19:13:15 IST" duration-ms="5131">
       <class name="com.swaglabs.testcases.TestProductPage">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@6221a451]" started-at="2024-02-06T01:44:07 IST" name="launchApplication" finished-at="2024-02-06T01:44:10 IST" duration-ms="2708" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@4a883b15]" started-at="2024-02-06T19:13:10 IST" name="launchApplication" finished-at="2024-02-06T19:13:13 IST" duration-ms="2602" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="testNavigationToProductDetail(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@6221a451]" started-at="2024-02-06T01:44:10 IST" name="testNavigationToProductDetail" data-provider="getData" finished-at="2024-02-06T01:44:10 IST" duration-ms="188" status="PASS">
+        <test-method signature="removeProductFromCartInProductPage(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@4a883b15]" started-at="2024-02-06T19:13:13 IST" name="removeProductFromCartInProductPage" data-provider="getData" finished-at="2024-02-06T19:13:13 IST" duration-ms="262" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,16 +21,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNavigationToProductDetail -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@6221a451]" started-at="2024-02-06T01:44:10 IST" name="launchApplication" finished-at="2024-02-06T01:44:12 IST" duration-ms="2023" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@6221a451]" started-at="2024-02-06T01:44:10 IST" name="teardown" finished-at="2024-02-06T01:44:10 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- removeProductFromCartInProductPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@4a883b15]" started-at="2024-02-06T19:13:13 IST" name="teardown" finished-at="2024-02-06T19:13:13 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="testNavigationToProductDetail(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@6221a451]" started-at="2024-02-06T01:44:12 IST" name="testNavigationToProductDetail" data-provider="getData" finished-at="2024-02-06T01:44:12 IST" duration-ms="216" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@4a883b15]" started-at="2024-02-06T19:13:13 IST" name="launchApplication" finished-at="2024-02-06T19:13:15 IST" duration-ms="1901" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="removeProductFromCartInProductPage(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@4a883b15]" started-at="2024-02-06T19:13:15 IST" name="removeProductFromCartInProductPage" data-provider="getData" finished-at="2024-02-06T19:13:15 IST" duration-ms="250" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -40,8 +40,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testNavigationToProductDetail -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@6221a451]" started-at="2024-02-06T01:44:12 IST" name="teardown" finished-at="2024-02-06T01:44:12 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- removeProductFromCartInProductPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@4a883b15]" started-at="2024-02-06T19:13:15 IST" name="teardown" finished-at="2024-02-06T19:13:15 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
