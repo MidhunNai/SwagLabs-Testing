@@ -137,10 +137,11 @@ public ProductDetail productDetail;
 	}
 	
 	public ProductDetail goToProductDetailByImage(String productName) {
-		WebElement getSingleProduct = productListElement.stream()
-				.filter(product->product.getText().equals(productName))
+		//System.out.println(inventoryElement);
+		WebElement getSingleProduct = inventoryElement.stream()
+				.filter(product->product.findElement(By.xpath(".//div[@class=\"inventory_item_name \"]")).getText().equals(productName))
 				.findFirst().orElse(null);
-		getSingleProduct.findElement(By.xpath("//div[@class=\"inventory_item_img\"]")).click();;	
+		getSingleProduct.findElement(By.xpath(".//div[@class=\"inventory_item_img\"]")).click();;	
 		productDetail = new ProductDetail(driver);
 		return productDetail;
 	}

@@ -122,7 +122,7 @@ public class TestProductPage extends BaseTest{
 		@Test(dataProvider="getData")
 		public void goToProductDetailByImage(HashMap<String,String> input) {
 			productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
-			productDetail = productPage.goToProductDetail(input.get("productName"));
+			productDetail = productPage.goToProductDetailByImage(input.get("productName"));
 			String product = productDetail.getProductName();
 			System.out.println(product);
 			Assert.assertTrue(product.equalsIgnoreCase(input.get("productName")));	
