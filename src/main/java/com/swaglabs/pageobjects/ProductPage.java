@@ -44,7 +44,7 @@ public ProductDetail productDetail;
 	
 	@FindBy(xpath="//div[@class=\"inventory_item\"]")
 	List<WebElement> inventoryElement;
-	
+		
 	public String productText() {
 		String productText = productHeading.getText();
 		return productText;
@@ -145,7 +145,5 @@ public ProductDetail productDetail;
 		productDetail = new ProductDetail(driver);
 		return productDetail;
 	}
-	
-	
 	
 }

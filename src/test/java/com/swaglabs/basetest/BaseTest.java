@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Properties;
@@ -17,7 +18,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
-
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -45,7 +45,7 @@ public class BaseTest {
 			driver = new ChromeDriver();
 		} else if (browserName.equalsIgnoreCase("Safari")) {
 			driver = new SafariDriver();
-		} else if (browserName.equalsIgnoreCase("FrieFox")) {
+		} else if (browserName.equalsIgnoreCase("FireFox")) {
 			driver = new FirefoxDriver();
 		} else {
 			System.out.println("Invalid Browser Name in Config File");
@@ -80,7 +80,7 @@ public class BaseTest {
 	
 	@AfterMethod(alwaysRun=true)
 	public void teardown() {
-		//driver.close();
+		driver.close();
 	}
 	
 	//Take screenshot

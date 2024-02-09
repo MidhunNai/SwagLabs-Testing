@@ -4,7 +4,6 @@ import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
 import org.testng.annotations.DataProvider;
 
-import com.sun.net.httpserver.Authenticator.Retry;
 import com.swaglabs.basetest.BaseTest;
 import com.swaglabs.pageobjects.ProductPage;
 

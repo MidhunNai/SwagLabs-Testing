@@ -65,10 +65,15 @@ public class TestProductPage extends BaseTest{
 		productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
 		WebElement addToCartbutton = productPage.addToCartElement(input.get("productName"));
 		addToCartbutton.click();
+		cartPage = goToCart();
+		boolean isCartItemDisplayedBeforeRemoval = cartPage.isCartItemDisplayed();
+		Assert.assertTrue(isCartItemDisplayedBeforeRemoval, "Cart item was not displayed before removal");
+		cartPage.goBackToProductPage();
 		WebElement removeFromCartButton = productPage.removeButtonElement(input.get("productName"));
 		removeFromCartButton.click();
 		cartPage = goToCart();
-		
+		boolean isCartItemDisplayedAfterRemoval = cartPage.isCartItemDisplayed();
+		Assert.assertFalse(isCartItemDisplayedAfterRemoval, "Cart item is still displayed after removal");
 	}
 	
 	//Add to cart multiple products
@@ -87,6 +92,27 @@ public class TestProductPage extends BaseTest{
 		productIncart = cartDetails[0];
 		Assert.assertTrue(productIncart.equalsIgnoreCase(input.get("product2")));
 	}
+	
+	//Remove from cart multiple products
+		@Test(dataProvider = "getData")
+		public void testRemoveMultipleProduct(HashMap<String,String> input) {
+				productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
+				WebElement addToCartbutton = productPage.addToCartElement(input.get("product1"));
+				addToCartbutton.click();
+				addToCartbutton = productPage.addToCartElement(input.get("product2"));
+				addToCartbutton.click();
+				cartPage = goToCart();
+				boolean isCartItemDisplayedBeforeRemoval = cartPage.isCartItemDisplayed();
+				Assert.assertTrue(isCartItemDisplayedBeforeRemoval, "Cart item was not displayed before removal");
+				cartPage.goBackToProductPage();
+				WebElement removeFromCartButton = productPage.removeButtonElement(input.get("product1"));
+				removeFromCartButton.click();
+				removeFromCartButton = productPage.removeButtonElement(input.get("product2"));
+				removeFromCartButton.click();
+				cartPage = goToCart();
+				boolean isCartItemDisplayedAfterRemoval = cartPage.isCartItemDisplayed();
+				Assert.assertFalse(isCartItemDisplayedAfterRemoval, "Cart item is still displayed after removal");
+			}	
 	
 	//Test product sorting
 	@Test(dataProvider = "getData")
@@ -114,18 +140,20 @@ public class TestProductPage extends BaseTest{
 	public void testNavigationToProductDetail(HashMap<String,String> input) {
 		productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
 		productDetail = productPage.goToProductDetail(input.get("productName"));
-		String product = productDetail.getProductName();
-		System.out.println(product);
-		Assert.assertTrue(product.equalsIgnoreCase(input.get("productName")));	
+		String[] product = productDetail.getProductDetails();
+		String selectedProduct = product[0];
+		//System.out.println(product);
+		Assert.assertTrue(selectedProduct.equalsIgnoreCase(input.get("productName")));	
 	}
 	//Navigate to product detail page by clicking Product Image
 		@Test(dataProvider="getData")
 		public void goToProductDetailByImage(HashMap<String,String> input) {
 			productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
 			productDetail = productPage.goToProductDetailByImage(input.get("productName"));
-			String product = productDetail.getProductName();
-			System.out.println(product);
-			Assert.assertTrue(product.equalsIgnoreCase(input.get("productName")));	
+			String[] product = productDetail.getProductDetails();
+			//System.out.println(product);
+			String selectedProduct = product[0];
+			Assert.assertTrue(selectedProduct.equalsIgnoreCase(input.get("productName")));	
 		}
 	
 	@DataProvider
