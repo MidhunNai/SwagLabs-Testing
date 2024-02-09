@@ -3,13 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.swaglabs.testcases.TestProductPage">
+      <class name="com.swaglabs.testcases.TestDetailPage">
         <methods>
           <include name="teardown"/>
-          <include name="testProductDisplay"/>
+          <include name="testProductDetails"/>
+          <include name="testaddTocart"/>
+          <include name="testBackToProduct"/>
           <include name="launchApplication"/>
+          <include name="testProductImage"/>
+          <include name="testRemoveFromcart"/>
         </methods>
-      </class> <!-- com.swaglabs.testcases.TestProductPage -->
+      </class> <!-- com.swaglabs.testcases.TestDetailPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
