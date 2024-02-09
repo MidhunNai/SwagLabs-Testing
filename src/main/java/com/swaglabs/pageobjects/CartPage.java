@@ -31,7 +31,7 @@ public class CartPage {
 	private WebElement findProductByName(String productName) {
 		System.out.println(productsInCart);
 		return productsInCart.stream()
-				.filter(product->product.findElement(By.xpath("//div[@class=\"inventory_item_name\"]"))
+				.filter(product->product.findElement(By.xpath(".//div[@class=\"inventory_item_name\"]"))
 						.getText().equalsIgnoreCase(productName))
 				.findFirst().orElse(null);
 	}
@@ -41,9 +41,9 @@ public class CartPage {
 		String[] cartDetails = new String[3];
 		WebElement selectedProduct = findProductByName(productName);
 		//System.out.println(selectedProduct);
-		cartDetails[0] = selectedProduct.findElement(By.xpath("//div[@class=\"inventory_item_name\"]")).getText();
-		cartDetails[1] = selectedProduct.findElement(By.xpath("//div[@class=\"inventory_item_desc\"]")).getText();
-		cartDetails[2] = selectedProduct.findElement(By.xpath("//div[@class=\"inventory_item_price\"]")).getText();
+		cartDetails[0] = selectedProduct.findElement(By.xpath(".//div[@class=\"inventory_item_name\"]")).getText();
+		cartDetails[1] = selectedProduct.findElement(By.xpath(".//div[@class=\"inventory_item_desc\"]")).getText();
+		cartDetails[2] = selectedProduct.findElement(By.xpath(".//div[@class=\"inventory_item_price\"]")).getText();
 		
 		return cartDetails;
 	}

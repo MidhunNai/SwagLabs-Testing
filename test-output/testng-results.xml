@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+<testng-results ignored="0" total="24" passed="24" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-09T12:31:36 IST" name="Default suite" finished-at="2024-02-09T12:32:22 IST" duration-ms="45923">
+  <suite started-at="2024-02-10T00:39:32 IST" name="Suite" finished-at="2024-02-10T00:40:04 IST" duration-ms="31781">
     <groups>
+      <group name="Regression">
+        <method signature="TestLoginFunctionality.testWithInvalidPassword(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" name="testWithInvalidPassword" class="com.swaglabs.testcases.TestLoginFunctionality"/>
+        <method signature="TestLoginFunctionality.testWithValidCredentials(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" name="testWithValidCredentials" class="com.swaglabs.testcases.TestLoginFunctionality"/>
+      </group> <!-- Regression -->
+      <group name="testrun">
+        <method signature="TestProductPage.testProductDescription(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" name="testProductDescription" class="com.swaglabs.testcases.TestProductPage"/>
+      </group> <!-- testrun -->
     </groups>
-    <test started-at="2024-02-09T12:31:36 IST" name="Default test" finished-at="2024-02-09T12:32:22 IST" duration-ms="45923">
-      <class name="com.swaglabs.testcases.TestDetailPage">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:31:36 IST" name="launchApplication" finished-at="2024-02-09T12:31:40 IST" duration-ms="3861" status="PASS">
+    <test started-at="2024-02-10T00:39:32 IST" name="TestLoginFunctionality" finished-at="2024-02-10T00:39:42 IST" duration-ms="9633">
+      <class name="com.swaglabs.testcases.TestLoginFunctionality">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:32 IST" name="launchApplication" finished-at="2024-02-10T00:39:34 IST" duration-ms="1402" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="testBackToProduct(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:31:40 IST" name="testBackToProduct" data-provider="getData" finished-at="2024-02-09T12:31:41 IST" duration-ms="758" status="PASS">
+        <test-method signature="testLogout(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:34 IST" name="testLogout" data-provider="getData" finished-at="2024-02-10T00:39:34 IST" duration-ms="772" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,35 +28,28 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testBackToProduct -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:31:41 IST" name="teardown" finished-at="2024-02-09T12:31:41 IST" duration-ms="425" status="PASS">
+        </test-method> <!-- testLogout -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:34 IST" name="teardown" finished-at="2024-02-10T00:39:34 IST" duration-ms="59" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:31:41 IST" name="launchApplication" finished-at="2024-02-09T12:31:44 IST" duration-ms="2845" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:34 IST" name="launchApplication" finished-at="2024-02-10T00:39:35 IST" duration-ms="901" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="testBackToProduct(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:31:44 IST" name="testBackToProduct" data-provider="getData" finished-at="2024-02-09T12:31:45 IST" duration-ms="753" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Test.allTheThings() T-Shirt (Red), validPassword=secret_sauce, product1=Sauce Labs Onesie, validUsername=standard_user, productName=Sauce Labs Bike Light, productDescription=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included., productPrice=$9.99}]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="testWithBlankFields()[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:35 IST" name="testWithBlankFields" finished-at="2024-02-10T00:39:35 IST" duration-ms="110" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testBackToProduct -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:31:45 IST" name="teardown" finished-at="2024-02-09T12:31:45 IST" duration-ms="415" status="PASS">
+        </test-method> <!-- testWithBlankFields -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:35 IST" name="teardown" finished-at="2024-02-10T00:39:36 IST" duration-ms="59" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:31:45 IST" name="launchApplication" finished-at="2024-02-09T12:31:48 IST" duration-ms="2795" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:36 IST" name="launchApplication" finished-at="2024-02-10T00:39:37 IST" duration-ms="1112" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="testProductDetails(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:31:48 IST" name="testProductDetails" data-provider="getData" finished-at="2024-02-09T12:31:48 IST" duration-ms="580" status="PASS">
+        <test-method signature="testWithInvalidPassword(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:37 IST" name="testWithInvalidPassword" data-provider="getData" finished-at="2024-02-10T00:39:37 IST" duration-ms="204" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -59,35 +59,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testProductDetails -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:31:48 IST" name="teardown" finished-at="2024-02-09T12:31:49 IST" duration-ms="399" status="PASS">
+        </test-method> <!-- testWithInvalidPassword -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:37 IST" name="teardown" finished-at="2024-02-10T00:39:37 IST" duration-ms="57" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:31:49 IST" name="launchApplication" finished-at="2024-02-09T12:31:52 IST" duration-ms="2775" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:37 IST" name="launchApplication" finished-at="2024-02-10T00:39:38 IST" duration-ms="1204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="testProductDetails(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:31:52 IST" name="testProductDetails" data-provider="getData" finished-at="2024-02-09T12:31:52 IST" duration-ms="570" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Test.allTheThings() T-Shirt (Red), validPassword=secret_sauce, product1=Sauce Labs Onesie, validUsername=standard_user, productName=Sauce Labs Bike Light, productDescription=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included., productPrice=$9.99}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testProductDetails -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:31:52 IST" name="teardown" finished-at="2024-02-09T12:31:53 IST" duration-ms="394" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:31:53 IST" name="launchApplication" finished-at="2024-02-09T12:31:55 IST" duration-ms="2904" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="testProductImage(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:31:55 IST" name="testProductImage" data-provider="getData" finished-at="2024-02-09T12:31:56 IST" duration-ms="586" status="PASS">
+        <test-method signature="testWithInvalidUsername(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:38 IST" name="testWithInvalidUsername" data-provider="getData" finished-at="2024-02-10T00:39:38 IST" duration-ms="171" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -97,35 +78,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testProductImage -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:31:56 IST" name="teardown" finished-at="2024-02-09T12:31:56 IST" duration-ms="389" status="PASS">
+        </test-method> <!-- testWithInvalidUsername -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:38 IST" name="teardown" finished-at="2024-02-10T00:39:38 IST" duration-ms="55" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:31:56 IST" name="launchApplication" finished-at="2024-02-09T12:31:59 IST" duration-ms="3014" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:38 IST" name="launchApplication" finished-at="2024-02-10T00:39:39 IST" duration-ms="1024" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="testProductImage(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:31:59 IST" name="testProductImage" data-provider="getData" finished-at="2024-02-09T12:32:00 IST" duration-ms="582" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Test.allTheThings() T-Shirt (Red), validPassword=secret_sauce, product1=Sauce Labs Onesie, validUsername=standard_user, productName=Sauce Labs Bike Light, productDescription=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included., productPrice=$9.99}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testProductImage -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:32:00 IST" name="teardown" finished-at="2024-02-09T12:32:01 IST" duration-ms="497" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:32:01 IST" name="launchApplication" finished-at="2024-02-09T12:32:04 IST" duration-ms="3087" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="testRemoveFromcart(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:32:04 IST" name="testRemoveFromcart" data-provider="getData" finished-at="2024-02-09T12:32:06 IST" duration-ms="2722" status="PASS">
+        <test-method signature="testWithLockedUser(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:39 IST" name="testWithLockedUser" data-provider="getData" finished-at="2024-02-10T00:39:40 IST" duration-ms="190" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -135,35 +97,16 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRemoveFromcart -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:32:06 IST" name="teardown" finished-at="2024-02-09T12:32:07 IST" duration-ms="437" status="PASS">
+        </test-method> <!-- testWithLockedUser -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:40 IST" name="teardown" finished-at="2024-02-10T00:39:40 IST" duration-ms="59" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:32:07 IST" name="launchApplication" finished-at="2024-02-09T12:32:10 IST" duration-ms="2912" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:40 IST" name="launchApplication" finished-at="2024-02-10T00:39:41 IST" duration-ms="1334" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="testRemoveFromcart(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:32:10 IST" name="testRemoveFromcart" data-provider="getData" finished-at="2024-02-09T12:32:12 IST" duration-ms="2709" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Test.allTheThings() T-Shirt (Red), validPassword=secret_sauce, product1=Sauce Labs Onesie, validUsername=standard_user, productName=Sauce Labs Bike Light, productDescription=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included., productPrice=$9.99}]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testRemoveFromcart -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:32:12 IST" name="teardown" finished-at="2024-02-09T12:32:13 IST" duration-ms="412" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:32:13 IST" name="launchApplication" finished-at="2024-02-09T12:32:16 IST" duration-ms="3082" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApplication -->
-        <test-method signature="testaddTocart(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:32:16 IST" name="testaddTocart" data-provider="getData" finished-at="2024-02-09T12:32:17 IST" duration-ms="996" status="PASS">
+        <test-method signature="testWithValidCredentials(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:41 IST" name="testWithValidCredentials" data-provider="getData" finished-at="2024-02-10T00:39:42 IST" duration-ms="764" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -173,16 +116,39 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testaddTocart -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:32:17 IST" name="teardown" finished-at="2024-02-09T12:32:17 IST" duration-ms="395" status="PASS">
+        </test-method> <!-- testWithValidCredentials -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestLoginFunctionality@6138e79a]" started-at="2024-02-10T00:39:42 IST" name="teardown" finished-at="2024-02-10T00:39:42 IST" duration-ms="57" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:32:17 IST" name="launchApplication" finished-at="2024-02-09T12:32:20 IST" duration-ms="2877" status="PASS">
+      </class> <!-- com.swaglabs.testcases.TestLoginFunctionality -->
+    </test> <!-- TestLoginFunctionality -->
+    <test started-at="2024-02-10T00:39:32 IST" name="TestProductPage" finished-at="2024-02-10T00:40:04 IST" duration-ms="31781">
+      <class name="com.swaglabs.testcases.TestProductPage">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:32 IST" name="launchApplication" finished-at="2024-02-10T00:39:34 IST" duration-ms="1393" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="testaddTocart(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:32:20 IST" name="testaddTocart" data-provider="getData" finished-at="2024-02-09T12:32:21 IST" duration-ms="1011" status="PASS">
+        <test-method signature="goToProductDetailByImage(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:34 IST" name="goToProductDetailByImage" data-provider="getData" finished-at="2024-02-10T00:39:34 IST" duration-ms="277" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Sauce Labs Bolt T-Shirt, validPassword=secret_sauce, product1=Sauce Labs Fleece Jacket, validUsername=standard_user, productName=Sauce Labs Backpack, productDescription=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection., productPrice=$29.99}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- goToProductDetailByImage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:34 IST" name="teardown" finished-at="2024-02-10T00:39:34 IST" duration-ms="59" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:34 IST" name="launchApplication" finished-at="2024-02-10T00:39:35 IST" duration-ms="1212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="goToProductDetailByImage(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:35 IST" name="goToProductDetailByImage" data-provider="getData" finished-at="2024-02-10T00:39:35 IST" duration-ms="228" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -192,12 +158,316 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testaddTocart -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestDetailPage@70e9c95d]" started-at="2024-02-09T12:32:21 IST" name="teardown" finished-at="2024-02-09T12:32:22 IST" duration-ms="609" status="PASS">
+        </test-method> <!-- goToProductDetailByImage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:35 IST" name="teardown" finished-at="2024-02-10T00:39:35 IST" duration-ms="60" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- com.swaglabs.testcases.TestDetailPage -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:35 IST" name="launchApplication" finished-at="2024-02-10T00:39:37 IST" duration-ms="1185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="removeProductFromCartInProductPage(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:37 IST" name="removeProductFromCartInProductPage" data-provider="getData" finished-at="2024-02-10T00:39:38 IST" duration-ms="1368" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Sauce Labs Bolt T-Shirt, validPassword=secret_sauce, product1=Sauce Labs Fleece Jacket, validUsername=standard_user, productName=Sauce Labs Backpack, productDescription=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection., productPrice=$29.99}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeProductFromCartInProductPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:38 IST" name="teardown" finished-at="2024-02-10T00:39:38 IST" duration-ms="60" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:38 IST" name="launchApplication" finished-at="2024-02-10T00:39:39 IST" duration-ms="1237" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="removeProductFromCartInProductPage(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:39 IST" name="removeProductFromCartInProductPage" data-provider="getData" finished-at="2024-02-10T00:39:41 IST" duration-ms="1358" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Test.allTheThings() T-Shirt (Red), validPassword=secret_sauce, product1=Sauce Labs Onesie, validUsername=standard_user, productName=Sauce Labs Bike Light, productDescription=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included., productPrice=$9.99}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- removeProductFromCartInProductPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:41 IST" name="teardown" finished-at="2024-02-10T00:39:41 IST" duration-ms="59" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:41 IST" name="launchApplication" finished-at="2024-02-10T00:39:42 IST" duration-ms="1156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="testAddMultipleProduct(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:42 IST" name="testAddMultipleProduct" data-provider="getData" finished-at="2024-02-10T00:39:42 IST" duration-ms="339" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Sauce Labs Bolt T-Shirt, validPassword=secret_sauce, product1=Sauce Labs Fleece Jacket, validUsername=standard_user, productName=Sauce Labs Backpack, productDescription=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection., productPrice=$29.99}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddMultipleProduct -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:42 IST" name="teardown" finished-at="2024-02-10T00:39:42 IST" duration-ms="59" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:42 IST" name="launchApplication" finished-at="2024-02-10T00:39:43 IST" duration-ms="1112" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="testAddMultipleProduct(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:43 IST" name="testAddMultipleProduct" data-provider="getData" finished-at="2024-02-10T00:39:44 IST" duration-ms="368" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Test.allTheThings() T-Shirt (Red), validPassword=secret_sauce, product1=Sauce Labs Onesie, validUsername=standard_user, productName=Sauce Labs Bike Light, productDescription=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included., productPrice=$9.99}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddMultipleProduct -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:44 IST" name="teardown" finished-at="2024-02-10T00:39:44 IST" duration-ms="56" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:44 IST" name="launchApplication" finished-at="2024-02-10T00:39:45 IST" duration-ms="1330" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="testAddToCart(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:45 IST" name="testAddToCart" data-provider="getData" finished-at="2024-02-10T00:39:45 IST" duration-ms="248" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Sauce Labs Bolt T-Shirt, validPassword=secret_sauce, product1=Sauce Labs Fleece Jacket, validUsername=standard_user, productName=Sauce Labs Backpack, productDescription=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection., productPrice=$29.99}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddToCart -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:45 IST" name="teardown" finished-at="2024-02-10T00:39:45 IST" duration-ms="58" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:45 IST" name="launchApplication" finished-at="2024-02-10T00:39:47 IST" duration-ms="1178" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="testAddToCart(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:47 IST" name="testAddToCart" data-provider="getData" finished-at="2024-02-10T00:39:47 IST" duration-ms="243" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Test.allTheThings() T-Shirt (Red), validPassword=secret_sauce, product1=Sauce Labs Onesie, validUsername=standard_user, productName=Sauce Labs Bike Light, productDescription=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included., productPrice=$9.99}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddToCart -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:47 IST" name="teardown" finished-at="2024-02-10T00:39:47 IST" duration-ms="58" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:47 IST" name="launchApplication" finished-at="2024-02-10T00:39:48 IST" duration-ms="1103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="testNavigationToProductDetail(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:48 IST" name="testNavigationToProductDetail" data-provider="getData" finished-at="2024-02-10T00:39:48 IST" duration-ms="207" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Sauce Labs Bolt T-Shirt, validPassword=secret_sauce, product1=Sauce Labs Fleece Jacket, validUsername=standard_user, productName=Sauce Labs Backpack, productDescription=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection., productPrice=$29.99}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavigationToProductDetail -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:48 IST" name="teardown" finished-at="2024-02-10T00:39:48 IST" duration-ms="57" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:48 IST" name="launchApplication" finished-at="2024-02-10T00:39:50 IST" duration-ms="1293" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="testNavigationToProductDetail(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:50 IST" name="testNavigationToProductDetail" data-provider="getData" finished-at="2024-02-10T00:39:50 IST" duration-ms="217" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Test.allTheThings() T-Shirt (Red), validPassword=secret_sauce, product1=Sauce Labs Onesie, validUsername=standard_user, productName=Sauce Labs Bike Light, productDescription=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included., productPrice=$9.99}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavigationToProductDetail -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:50 IST" name="teardown" finished-at="2024-02-10T00:39:50 IST" duration-ms="58" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:50 IST" name="launchApplication" finished-at="2024-02-10T00:39:51 IST" duration-ms="1109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="testProductDescription(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:51 IST" name="testProductDescription" data-provider="getData" finished-at="2024-02-10T00:39:51 IST" duration-ms="178" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Sauce Labs Bolt T-Shirt, validPassword=secret_sauce, product1=Sauce Labs Fleece Jacket, validUsername=standard_user, productName=Sauce Labs Backpack, productDescription=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection., productPrice=$29.99}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductDescription -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:51 IST" name="teardown" finished-at="2024-02-10T00:39:51 IST" duration-ms="57" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:51 IST" name="launchApplication" finished-at="2024-02-10T00:39:52 IST" duration-ms="1132" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="testProductDescription(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:52 IST" name="testProductDescription" data-provider="getData" finished-at="2024-02-10T00:39:53 IST" duration-ms="184" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Test.allTheThings() T-Shirt (Red), validPassword=secret_sauce, product1=Sauce Labs Onesie, validUsername=standard_user, productName=Sauce Labs Bike Light, productDescription=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included., productPrice=$9.99}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductDescription -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:53 IST" name="teardown" finished-at="2024-02-10T00:39:53 IST" duration-ms="58" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:53 IST" name="launchApplication" finished-at="2024-02-10T00:39:54 IST" duration-ms="1256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="testProductDisplay(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:54 IST" name="testProductDisplay" data-provider="getData" finished-at="2024-02-10T00:39:54 IST" duration-ms="166" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Sauce Labs Bolt T-Shirt, validPassword=secret_sauce, product1=Sauce Labs Fleece Jacket, validUsername=standard_user, productName=Sauce Labs Backpack, productDescription=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection., productPrice=$29.99}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductDisplay -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:54 IST" name="teardown" finished-at="2024-02-10T00:39:54 IST" duration-ms="59" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:54 IST" name="launchApplication" finished-at="2024-02-10T00:39:55 IST" duration-ms="1062" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="testProductDisplay(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:55 IST" name="testProductDisplay" data-provider="getData" finished-at="2024-02-10T00:39:55 IST" duration-ms="160" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Test.allTheThings() T-Shirt (Red), validPassword=secret_sauce, product1=Sauce Labs Onesie, validUsername=standard_user, productName=Sauce Labs Bike Light, productDescription=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included., productPrice=$9.99}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductDisplay -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:55 IST" name="teardown" finished-at="2024-02-10T00:39:55 IST" duration-ms="58" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:55 IST" name="launchApplication" finished-at="2024-02-10T00:39:57 IST" duration-ms="1270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="testProductSorting(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:57 IST" name="testProductSorting" data-provider="getData" finished-at="2024-02-10T00:39:57 IST" duration-ms="364" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Sauce Labs Bolt T-Shirt, validPassword=secret_sauce, product1=Sauce Labs Fleece Jacket, validUsername=standard_user, productName=Sauce Labs Backpack, productDescription=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection., productPrice=$29.99}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductSorting -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:57 IST" name="teardown" finished-at="2024-02-10T00:39:57 IST" duration-ms="58" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:57 IST" name="launchApplication" finished-at="2024-02-10T00:39:58 IST" duration-ms="1134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="testProductSorting(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:58 IST" name="testProductSorting" data-provider="getData" finished-at="2024-02-10T00:39:59 IST" duration-ms="366" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Test.allTheThings() T-Shirt (Red), validPassword=secret_sauce, product1=Sauce Labs Onesie, validUsername=standard_user, productName=Sauce Labs Bike Light, productDescription=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included., productPrice=$9.99}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testProductSorting -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:59 IST" name="teardown" finished-at="2024-02-10T00:39:59 IST" duration-ms="58" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:39:59 IST" name="launchApplication" finished-at="2024-02-10T00:40:00 IST" duration-ms="1105" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="testRemoveMultipleProduct(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:40:00 IST" name="testRemoveMultipleProduct" data-provider="getData" finished-at="2024-02-10T00:40:01 IST" duration-ms="1429" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Sauce Labs Bolt T-Shirt, validPassword=secret_sauce, product1=Sauce Labs Fleece Jacket, validUsername=standard_user, productName=Sauce Labs Backpack, productDescription=carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection., productPrice=$29.99}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemoveMultipleProduct -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:40:01 IST" name="teardown" finished-at="2024-02-10T00:40:01 IST" duration-ms="60" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:40:01 IST" name="launchApplication" finished-at="2024-02-10T00:40:02 IST" duration-ms="1176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method signature="testRemoveMultipleProduct(java.util.HashMap)[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:40:02 IST" name="testRemoveMultipleProduct" data-provider="getData" finished-at="2024-02-10T00:40:04 IST" duration-ms="1476" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{lockedUsername=locked_out_user, invalidUsername=username, invalidPassword=Pssword@123, product2=Test.allTheThings() T-Shirt (Red), validPassword=secret_sauce, product1=Sauce Labs Onesie, validUsername=standard_user, productName=Sauce Labs Bike Light, productDescription=A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included., productPrice=$9.99}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemoveMultipleProduct -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.swaglabs.testcases.TestProductPage@36328d33]" started-at="2024-02-10T00:40:04 IST" name="teardown" finished-at="2024-02-10T00:40:04 IST" duration-ms="61" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.swaglabs.testcases.TestProductPage -->
+    </test> <!-- TestProductPage -->
+  </suite> <!-- Suite -->
 </testng-results>

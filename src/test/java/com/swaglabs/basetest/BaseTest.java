@@ -16,6 +16,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterMethod;
@@ -40,9 +41,13 @@ public class BaseTest {
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/Configuration/config.properties");
 		property.load(fis);
 		String browserName = property.getProperty("browser");
+		
+		//Set Chrome options to run in headless mode
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless");
 	
 		if(browserName.equalsIgnoreCase("Chrome")) {
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(options);
 		} else if (browserName.equalsIgnoreCase("Safari")) {
 			driver = new SafariDriver();
 		} else if (browserName.equalsIgnoreCase("FireFox")) {

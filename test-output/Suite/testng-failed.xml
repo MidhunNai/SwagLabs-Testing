@@ -15,4 +15,15 @@
       </class> <!-- com.swaglabs.testcases.TestLoginFunctionality -->
     </classes>
   </test> <!-- TestLoginFunctionality(failed) -->
+  <test thread-count="5" parallel="tests" name="TestProductPage(failed)">
+    <classes>
+      <class name="com.swaglabs.testcases.TestProductPage">
+        <methods>
+          <include name="teardown"/>
+          <include name="testAddMultipleProduct" invocation-numbers="0 1"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- com.swaglabs.testcases.TestProductPage -->
+    </classes>
+  </test> <!-- TestProductPage(failed) -->
 </suite> <!-- Failed suite [Suite] -->
