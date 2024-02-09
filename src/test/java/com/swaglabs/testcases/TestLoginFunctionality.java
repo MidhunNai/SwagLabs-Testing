@@ -35,7 +35,7 @@ public class TestLoginFunctionality extends BaseTest{
 		
 		login.gotoApplication();
 		String error = login.invalidLogin(input.get("validUsername"), input.get("invalidPassword"));
-		AssertJUnit.assertTrue(error.equalsIgnoreCase("Username and password do not match any user in this service"));;
+		AssertJUnit.assertTrue(error.equalsIgnoreCase("Epic sadface: Username and password do not match any user in this service"));;
 		
 	}
 	
