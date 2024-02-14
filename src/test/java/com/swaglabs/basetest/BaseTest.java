@@ -40,7 +40,8 @@ public class BaseTest {
 		Properties property = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"/Configuration/config.properties");
 		property.load(fis);
-		String browserName = property.getProperty("browser");
+		//Checking browser name from mvn command by using System.getProperty otherwise use global property.
+		String browserName = System.getProperty("browser")!=null ? System.getProperty("browser") : property.getProperty("browser");
 		
 		//Set Chrome options to run in headless mode
 		ChromeOptions options = new ChromeOptions();
