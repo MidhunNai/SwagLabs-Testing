@@ -18,6 +18,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -43,16 +44,20 @@ public class BaseTest {
 		//Checking browser name from mvn command by using System.getProperty otherwise use global property.
 		String browserName = System.getProperty("browser")!=null ? System.getProperty("browser") : property.getProperty("browser");
 		
-		//Set Chrome options to run in headless mode
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--headless");
-	
-		if(browserName.equalsIgnoreCase("Chrome")) {
+		if(browserName.contains("Chrome")) {
+			ChromeOptions options = new ChromeOptions();
+			if(browserName.contains("headless")) {
+				options.addArguments("--headless");
+			}
 			driver = new ChromeDriver(options);
 		} else if (browserName.equalsIgnoreCase("Safari")) {
 			driver = new SafariDriver();
-		} else if (browserName.equalsIgnoreCase("FireFox")) {
-			driver = new FirefoxDriver();
+		} else if (browserName.contains("FireFox")) {
+			FirefoxOptions option = new FirefoxOptions();
+			if(browserName.contains("headless")) {
+				option.addArguments("--headless");
+			}
+			driver = new FirefoxDriver(option);
 		} else {
 			System.out.println("Invalid Browser Name in Config File");
 		}
