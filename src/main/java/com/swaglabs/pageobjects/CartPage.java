@@ -15,6 +15,8 @@ public class CartPage {
 	
 	WebDriver driver;
 	WebDriverWait wait;
+	CheckoutPage checkout;
+	
 	public CartPage(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -27,6 +29,9 @@ public class CartPage {
 	
 	@FindBy(id="continue-shopping")
 	WebElement continueShoppingElement;
+	
+	@FindBy(id="checkout")
+	WebElement checkoutButtonElement;
 	
 	private WebElement findProductByName(String productName) {
 		System.out.println(productsInCart);
@@ -79,6 +84,12 @@ public class CartPage {
 	public void goBackToProductDetailPage(String productName) {
 		WebElement selectedProduct = findProductByName(productName);
 		selectedProduct.findElement(By.xpath("//div[@class=\"inventory_item_name\"]")).click();
+	}
+	
+	public CheckoutPage goToCheckout() {
+		checkoutButtonElement.click();
+		checkout = new CheckoutPage(driver);
+		return checkout;
 	}
 	
 }
