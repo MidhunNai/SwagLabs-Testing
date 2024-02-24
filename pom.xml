@@ -33,21 +33,28 @@
 			<artifactId>extentreports</artifactId>
 			<version>5.1.1</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-java</artifactId>
-    <version>7.15.0</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
-<dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-testng</artifactId>
-    <version>7.15.0</version>
+		<dependency>
+    		<groupId>io.cucumber</groupId>
+    		<artifactId>cucumber-java</artifactId>
+   			 <version>7.15.0</version>
+		</dependency>
+		<dependency>
+ 		 <groupId>io.cucumber</groupId>
+   		 <artifactId>cucumber-testng</artifactId>
+   		 <version>7.15.0</version>
+		</dependency>
+		<dependency>
+ 		   <groupId>org.apache.poi</groupId>
+ 		   <artifactId>poi-ooxml</artifactId>
+		    <version>5.2.5</version>
+		</dependency>
+		<dependency>
+    <groupId>org.apache.poi</groupId>
+    <artifactId>poi</artifactId>
+    <version>5.2.5</version>
 </dependency>
 
-
-	</dependencies>
+</dependencies>
 
 	<profiles>
 		<profile>
