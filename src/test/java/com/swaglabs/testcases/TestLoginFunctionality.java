@@ -59,7 +59,7 @@ public class TestLoginFunctionality extends BaseTest{
 	}
 	
 	//Login with locked out user
-	@Test(dataProvider = "getData") 
+	@Test(dataProvider = "getData",groups = {"Regression"}) 
 	public void testWithLockedUser(HashMap<String,String> input) throws IOException {
 		
 		login.gotoApplication();
@@ -68,7 +68,7 @@ public class TestLoginFunctionality extends BaseTest{
 	}
 	
 	//Testing Logout
-	@Test(dataProvider = "getData") 
+	@Test(dataProvider = "getData",groups = {"Regression"}) 
 	public void testLogout(HashMap<String,String> input) throws IOException {
 		
 		login.gotoApplication();
