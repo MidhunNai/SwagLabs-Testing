@@ -26,7 +26,7 @@ public class TestProductPage extends BaseTest{
 	ProductDetail productDetail = null;
 	
 	//Testing Product Display
-	@Test(dataProvider = "getData") 
+	@Test(dataProvider = "getData",groups = {"Regression"}) 
 	public void testProductDisplay(HashMap<String,String> input) {
 		productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
 		String productName = productPage.getSingleProduct(input.get("productName"));
@@ -48,7 +48,7 @@ public class TestProductPage extends BaseTest{
 	}
 	
 	//Add to cart single product
-	@Test(dataProvider = "getData")
+	@Test(dataProvider = "getData",groups = {"Regression"})
 	public void testAddToCart(HashMap<String,String> input) {
 		productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
 		WebElement addToCartbutton = productPage.addToCartElement(input.get("productName"));
@@ -94,7 +94,7 @@ public class TestProductPage extends BaseTest{
 	}
 	
 	//Remove from cart multiple products
-		@Test(dataProvider = "getData")
+		@Test(dataProvider = "getData",groups = {"Regression"})
 		public void testRemoveMultipleProduct(HashMap<String,String> input) {
 				productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
 				WebElement addToCartbutton = productPage.addToCartElement(input.get("product1"));
@@ -115,7 +115,7 @@ public class TestProductPage extends BaseTest{
 			}	
 	
 	//Test product sorting
-	@Test(dataProvider = "getData")
+	@Test(dataProvider = "getData",groups = {"Regression"})
 	public void testProductSorting(HashMap<String,String> input) {
 		productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
 		productPage.selectSortOrderZtoA();

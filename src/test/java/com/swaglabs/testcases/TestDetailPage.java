@@ -51,7 +51,7 @@ public class TestDetailPage extends BaseTest {
 	}
 	
 	//Test Add product to cart
-	@Test(dataProvider = "getData")
+	@Test(dataProvider = "getData",groups = {"Regression"})
 	public void testaddTocart(HashMap<String,String> input) {
 		productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
 		productDetail = productPage.goToProductDetail(input.get("productName"));
@@ -64,7 +64,7 @@ public class TestDetailPage extends BaseTest {
 	}
 	
 	//Test Remove product from cart
-	@Test(dataProvider = "getData")
+	@Test(dataProvider = "getData",groups = {"Regression"})
 	public void testRemoveFromcart(HashMap<String,String> input) {
 		productPage = login.loginApp(input.get("validUsername"), input.get("validPassword"));
 		productDetail = productPage.goToProductDetail(input.get("productName"));

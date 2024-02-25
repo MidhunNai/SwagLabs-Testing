@@ -58,7 +58,7 @@
 
 	<profiles>
 		<profile>
-			<id>AllTest</id>
+			<id>R</id>
 			<build>
 				<pluginManagement>
 					<plugins>
